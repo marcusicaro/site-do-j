@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="normalize.css">
+    <link rel="stylesheet" href="css/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/slider.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"/>
+
+</head>
+<body>
+    <header class="primary-header flex">
+        <div class="logo-content">
+            <img src="assets/josegarrido.jpeg" alt="logo" srcset="" class="logo">
+        </div>
+
+        <button class="mobile-nav-toggle" aria-controls="primary-navigation" aria-expanded="false"><span aria-label="Menu"></span></button>
+
+        <nav>
+            <ul data-visible="false" id="primary-navigation" class="primary-navigation flex">
+                <li class="active">
+                    <a href="">ARTISTAS</a>
+                </li>
+                <li><a href="">SOBRE</a></li>
+                <li><a href="">MOLDURAS</a></li>
+                <li><a href="">PAPÉIS</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="slider">
+        <div class="container">
+            <!-- Slider main container -->
+            <div class="swiper">
+                <!-- Additional required wrapper -->
+                <div class="swiper-wrapper">
+                <!-- Slides -->
+                <div class="swiper-slide"><img src="assets/img1.jpeg" alt="" srcset=""></div>
+                <div class="swiper-slide"><img src="assets/img2.jpeg" alt="" srcset=""></div>
+                <div class="swiper-slide"><img src="assets/img3.jpeg" alt="" srcset=""></div>
+                </div>
+                <!-- If we need pagination -->
+                <div class="swiper-pagination"></div>
+            
+                <!-- If we need navigation buttons -->
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
+            </div>
+        </div>
+    </div>
+    <script src="nav.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+    <script>
+        const swiper = new Swiper('.swiper', {
+            autoplay: {
+                delay: 3000,
+                disableOnInteraction: false,
+            },
+
+    // Optional parameters
+    loop: true,
+  
+    // If we need pagination
+    pagination: {
+      el: '.swiper-pagination',
+      clickable: true,
+    },
+  
+    // Navigation arrows
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
+  
+  });
+    </script>
+    <!-- <script src="slider.js"></script> -->
+</body>
+</html>
